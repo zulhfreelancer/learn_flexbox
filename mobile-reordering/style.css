@@ -97,4 +97,43 @@ section, footer {
     flex-basis: 100%;
   }
 
+  /* Flex container */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Flex items */
+  .wrapper > * {
+    order: 9999; /* push everything to bottom */
+  }
+
+  .flex-nav {
+    order: 1; /* put it on very top */
+  }
+
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+  }
+
+  .top {
+    order: 2;
+  }
+
+  .details {
+    order: 3;
+  }
+
+  .signup {
+    order: 4;
+  }
+
 }
