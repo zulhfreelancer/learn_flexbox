@@ -101,3 +101,51 @@ a.button {
 /*
   Overall Layout
 */
+.app-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-wrap > * {
+  flex: 1 1 auto;
+}
+
+/*
+  Header
+*/
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+  Content
+*/
+.content {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+  Icon bar
+*/
+.icon-bar {
+  display: flex;
+
+  /*
+  * The flex-shrink is flex item property, .icon-bar is flex item of .app-wrap
+  * and its flex-direction property is set to column (top to bottom).
+  *
+  * Setting flex-shrink to 0 means we stop it from shrinking when the
+  * the top element (scrollable content) is overflowing.
+  *
+  * Read more on CodePen blog:
+  * http://bit.ly/2tv5l7d
+  */
+  flex-shrink: 0;
+}
+
+.icon-bar a {
+  flex: 1;
+}
